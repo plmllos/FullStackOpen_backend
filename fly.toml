@@ -1,0 +1,25 @@
+# fly.toml app configuration file generated for part3-rough-lake-7233 on 2024-12-22T16:43:19+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'part3-rough-lake-7233'
+primary_region = 'ams'
+
+[build]
+
+[env]
+  PORT = '3000'
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
