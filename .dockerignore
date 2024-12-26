@@ -1,2 +1,4 @@
-node_modules
-requests
+/node_modules
+.dockerignore
+.env
+fly.toml

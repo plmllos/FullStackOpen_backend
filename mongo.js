@@ -35,7 +35,7 @@ if (person.name) {
   Person.find({}).then((result) => {
     console.log(`Phonebook:`);
     result.forEach((person) => {
-      console.log(`${person.name} ${person.number}`);
+      response.send(`${person.name} ${person.number}`);
     });
     mongoose.connection.close();
   });
